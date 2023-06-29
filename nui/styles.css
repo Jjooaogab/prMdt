@@ -133,6 +133,7 @@ img {
 
 /* Sidebar */
 
+
 .sidebar {
   position: relative;
   height: 100%;
@@ -158,6 +159,8 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
 }
 
 .iconStyle {
@@ -181,13 +184,12 @@ img {
   border-radius: 0.9375em;
 }
 
-.icons i:hover {
+.iconStyle:hover {
   position: static;
   color: var(--color-lightGray);
   background-color: var(--color-lightCyan);
-  font-size: 225%;
-  border-radius: 0.9375em;
-  padding: 0.4375em 0.4375em;
+  border-radius: 1em;
+  padding: 0.3em 0.3em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -203,12 +205,8 @@ img {
   border-radius: 15px;
 }
 
-.dayWithVindas {
-  display: flex;
-  height: 1000px;
-}
-
 .vindas {
+  position: relative;
   font-size: 24px;
   font-weight: bold;
   margin-left: 12.5%;
@@ -217,6 +215,7 @@ img {
 }
 
 .day {
+  position: relative;
   font-size: 16px;
   font-weight: 500;
   margin-left: 12.5%;
