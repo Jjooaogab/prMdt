@@ -67,11 +67,14 @@
   height: 40vh;
   transform: translateY(3vw);
   border-radius: 15px;
+  display: flex;
+  flex-direction: row;
 }
 
 .rightSection {
   position: relative;
   width: 40%;
+  height:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -99,18 +102,83 @@
 }
 
 .rightSection button {
+  position: relative;
   transform: translateY(2vw);
   outline: none;
   border: none;
   border-radius: 15px;
   margin: 10px 6px;
   padding: .5vh 3vw;
+  transition: all .3s ease-in-out;
 }
 
 .rightSection button i {
   color: white;
   font-weight: 100;
   font-size: 150%;
-  transition: all .3s ease-in-out;
 }
 
+.rightSection button:hover {
+  opacity: 0.5;
+}
+
+.leftSection {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  height: 100%;
+  align-items: center;
+}
+
+.leftSection span {
+  color: var(--color-lightGray);
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.leftSection p {
+  color: white;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.rightInfos {
+  margin-left: 2.5vw;
+}
+
+.divSeparatorS {
+  margin-right: 10vh;
+  margin-bottom: 2vh;
+}
+
+.spanResult {
+  transform: translate(8vh, 2vw);
+  font-size: 20px;
+  color: white;
+}
+
+.buttonsInfosSearched {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  transform: translate(-48.5vh, 4vw);
+}
+
+.btnIS {
+  outline: none;
+  border: none;
+  color: white;
+  background-color: var(--color-lightCyan);
+  font-size: 24px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin-left: 10px;
+  transition: all .45s ease ;
+}
+
+.btnIS:hover, .btnActive {
+  background-color: var(--color-darkBlue);
+  font-size: 24px;
+  padding: 10px 30px;
+}

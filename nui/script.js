@@ -37,6 +37,11 @@ $(function () {
     $("#" + pageId + "-page").fadeIn();
   });
 
+  $(".btnIS").click(function() {
+    $(".btnIS").removeClass("btnActive");
+    $(this).addClass("btnActive")
+  })
+
   $("home").click(function() {
     $("#pageHome").show()
     $("home").addClass("active")
