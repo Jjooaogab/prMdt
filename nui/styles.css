@@ -175,7 +175,7 @@ img {
 
 .iconStyle2 {
   position: relative;
-  font-size: 150%;
+  font-size: 180%;
   margin-top: 5%;
   margin-left: 5%;
   margin-bottom: 10%;
@@ -184,7 +184,7 @@ img {
   border-radius: 0.9375em;
 }
 
-.iconStyle:hover {
+.iconStyle:hover, .active {
   position: static;
   color: var(--color-lightGray);
   background-color: var(--color-lightCyan);
@@ -195,9 +195,7 @@ img {
   justify-content: center;
 }
 
-/* Page home */
-
-.pageHome {
+.page {
   position: relative;
   width: 93.5%;
   height: 100%;
@@ -206,6 +204,8 @@ img {
   border-radius: 15px;
   display: none;
 }
+
+/* Page home */
 
 .containerDay {
   display: flex;
@@ -268,19 +268,17 @@ img {
   background-color: var(--color-cyan);
   width: 175px;
   height: 8px;
-  padding: 12px 1px;
+  padding: 8px 1px;
   border-radius: 0.9375em;
   margin-left: -0.1vw;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  display: flex;
-  align-items: center;
+
 }
 
 #spanOfficiePolice {
-  margin-left: .3vw;
-  margin-top: -.1vh;
+  margin-left: .4vw;
 }
 
 .nameOfficial {
@@ -290,11 +288,11 @@ img {
   color: var(--color-lightCyan);
   display: flex;
   flex-direction: column;
-  margin-top: -.7vw;
+  margin-top: -.3vw;
 }
 
 #spanNameOfficial {
-  margin-bottom: -1vw;
+  margin-bottom: -.4vw;
 }
 
 /* Mexer responsivo */
@@ -308,7 +306,7 @@ img {
   color: white;
   background-color: var(--color-lightCyan);
   margin-left: 33vh;
-  margin-top: -.5vw;
+  margin-top: .5vw;
   transition: all .3s;
 }
 
@@ -348,7 +346,7 @@ img {
 .spanHa {
   position: relative;
   color: white;
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 500;
   margin-bottom: 2vw;
 }
@@ -357,8 +355,9 @@ img {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  margin: 0px 30px;
   margin-bottom: 4vw;
 }
 
@@ -439,7 +438,7 @@ img {
 .span1W {
   margin-top: var(--10pixel-in-em);
   color: white;
-
+  font-size: 24px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
@@ -447,6 +446,7 @@ img {
 .span2W {
   margin-top: .5vh;
   color: white;
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }

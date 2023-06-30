@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link href="searchStyle.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -17,6 +18,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -33,27 +37,27 @@
         </div>
         <div class="icons">
           <nav class="categoria">
-            <i class="fa-solid fa-house iconStyle"></i>
+            <i class="fa-solid fa-house iconStyle active" id="home"></i>
 
-            <i class="fa-solid fa-search iconStyle"></i>
+            <i class="fa-solid fa-search iconStyle" id="search"></i>
 
-            <i class="fa-solid fa-car iconStyle"></i>
+            <i class="fa-solid fa-car iconStyle" id="searchCar"></i>
 
-            <i class="fa-solid fa-clipboard-list iconStyle"></i>
+            <i class="fa-solid fa-clipboard-list iconStyle" id="reportCard"></i>
 
-            <i class="fa-solid fa-envelope-open-text iconStyle"></i>
+            <i class="fa-solid fa-envelope-open-text iconStyle" id="warnings"></i>
 
-            <i class="fa-solid fa-user-group iconStyle"></i>
+            <i class="fa-solid fa-user-group iconStyle" id="offices"></i>
 
-            <i class="fa-solid fa-handcuffs iconStyle"></i>
+            <i class="fa-solid fa-handcuffs iconStyle" id="arrest"></i>
 
-            <i class="fa-solid fa-paperclip iconStyle"></i>
+            <i class="fa-solid fa-paperclip iconStyle" id="trafficTicket"></i>
 
-            <i class="fa-solid fa-close iconStyle" style="color: red;"></i>
+            <i class="fa-solid fa-close iconStyle" style="color: red;" id="close"></i>
         </div>
       </div>
     </aside>
-    <div class="pageHome" id="pageHome">
+    <div class="page" id="home-page">
       <div class="containerDay">
         <h2 class="vindas">Boas vindas.</h2>
         <span class="day" id="spanDay"></span>
@@ -157,13 +161,41 @@
           <textarea placeholder="Ex.: Reunião na DP do paleto as 19h" id="txtAreaW"></textarea>
           <div class="modal-buttons">
             <button class="cancel" onclick="closeModal()">Cancelar</button>
-            <button class="create">Criar</button>
+            <button class="create" id="confirmW">Criar</button>
           </div>
         </div>
       </div>
       <!-- <div class="graphArrests">
         <canvas id="myChart"></canvas>
       </div> -->
+    </div>
+    <div class="page" id="search-page">
+      <div class="containerSearch">
+        <div class="topSearch">
+          <label for="searchInput" class="labelSearchInput">Consultar indivíduos </label>
+          <input type="text" id="searchInput" placeholder="Digite o nome ou o passaporte do indivíduo">
+          <i class="fas fa-search iconSearch"></i>
+        </div>
+        <div class="spanResult">
+          Resultados da pesquisa:
+        </div>
+        <div class="containerResultInfos">
+          <div class="infosSearched">
+            <div class="rightSection">
+              <img src="https://cdn.discordapp.com/attachments/966571671140069406/983207620934512650/unknown.png" alt="">
+              <div class="containerButton">
+                <button id="buttonCamera">
+                  <i class="bx bx-camera"></i>
+                </button>
+                <button id="buttonSearched">
+                  <i class='bx bx-error-circle'></i>
+                </button>
+              </div>
+            </div>
+            <div class="leftSection"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   </div>

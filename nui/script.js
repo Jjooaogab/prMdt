@@ -7,7 +7,8 @@ $(function () {
   function display(bool) {
     if (bool) {
       $("#container").show();
-      $("#pageHome").show()
+      $("#home-page").show()
+      $(".topSearch").hide()
     } else {
       $("#container").hide();
     }
@@ -15,11 +16,31 @@ $(function () {
 
   display(true);
 
+  $("#close").click(function(data){
+    $.post("http://prMdt/exit", JSON.stringify({}));
+  })
+
   document.onkeyup = function (data) {
     if (data.which == 27) {
       $.post("http://prMdt/exit", JSON.stringify({}));
     }
   }
+
+  $(".iconStyle").click(function() {
+    $(".iconStyle").removeClass("active");
+    $(this).addClass("active");
+
+    let pageId = $(this).attr("id");
+
+    $(".page").hide()
+    
+    $("#" + pageId + "-page").fadeIn();
+  });
+
+  $("home").click(function() {
+    $("#pageHome").show()
+    $("home").addClass("active")
+  })
 
   window.addEventListener("message", function (e) {
     let item = e.data;
@@ -67,7 +88,7 @@ $(function () {
   const divAll = $("#muralWarnings");
   const divWarning = $("#warningsDiv")
 
-  $("#confirmW").click(function (name, sobrenome, org) {
+  $("#confirmW").click(function (name, firstname, org) {
 
     let value = $("#inputWarning").val();
     let img = "https://cdn.discordapp.com/attachments/966571671140069406/983207620934512650/unknown.png"
@@ -91,8 +112,6 @@ $(function () {
     imgW.append(imgSrcW)
     infosW.append(span1, span2)
     contentWarning.append(valueWarning)
-
-
 
     itensW.append(imgW, infosW, contentWarning)
     divWarning.append(itensW)
@@ -160,17 +179,6 @@ function clickToEnterService() {
 // })
 
 // OpenModal 
-const buttonW = document.getElementById("buttonNewWarning");
-const closeW = document.getElementById("closeW");
-
-buttonW.addEventListener("click", function () {
-  document.getElementById("modalContainer").classList.add("show");
-});
-
-closeW.addEventListener("click", function () {
-  document.getElementById("modalContainer").classList.remove("show");
-})
-
 function openModal() {
   document.getElementById("myModal").style.display = "flex";
 }
