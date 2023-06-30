@@ -35,84 +35,137 @@
         </div>
         <div class="icons">
           <nav class="categoria">
-              <i class="fa-solid fa-house iconStyle"  
-              data-bs-toggle="tooltip" 
-              data-bs-placement="bottom" 
-              data-bs-title="Home"  
-              data-bs-offset="10,30"
-              delay="1000"
-              ></i>
+            <i class="fa-solid fa-house iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Home" data-bs-offset="10,30" delay="1000"></i>
 
-            <i class="fa-solid fa-search iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Pesquisar"  
-            data-bs-offset="10,30"
-            delay="1000"
-            ></i>
+            <i class="fa-solid fa-search iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Pesquisar" data-bs-offset="10,30" delay="1000"></i>
 
-            <i class="fa-solid fa-car iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Veículos"  
-            data-bs-offset="10,30"
-            delay="1000"
-            ></i>
+            <i class="fa-solid fa-car iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Veículos" data-bs-offset="10,30" delay="1000"></i>
 
-            <i class="fa-solid fa-clipboard-list iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Boletins"  
-            data-bs-offset="10,30"
-            delay="1000"
+            <i class="fa-solid fa-clipboard-list iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Boletins" data-bs-offset="10,30" delay="1000" <i
+              class="fa-solid fa-envelope-open-text iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Avisos" data-bs-offset="10,30" delay="1000"></i>
 
-            <i class="fa-solid fa-envelope-open-text iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Avisos"  
-            data-bs-offset="10,30"
-            delay="1000"
-            ></i>
+            <i class="fa-solid fa-user-group iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Oficiais" data-bs-offset="10,30" delay="1000"></i>
 
-            <i class="fa-solid fa-user-group iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Oficiais"  
-            data-bs-offset="10,30"
-            delay="1000"
-            ></i>
+            <i class="fa-solid fa-handcuffs iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Prender" data-bs-offset="10,30" delay="1000"></i>
 
-            <i class="fa-solid fa-handcuffs iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Prender"  
-            data-bs-offset="10,30"
-            delay="1000"
-            ></i>
-            
-            <i class="fa-solid fa-paperclip iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Multar"  
-            data-bs-offset="10,30"
-            delay="1000"
-            ></i>
+            <i class="fa-solid fa-paperclip iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Multar" data-bs-offset="10,30" delay="1000"></i>
 
-            <i class="fa-solid fa-close iconStyle"
-            data-bs-toggle="tooltip" 
-            data-bs-placement="bottom" 
-            data-bs-title="Fechar"  
-            data-bs-offset="10,30"
-            delay="1000"
-            style="color: red;"
-            ></i>
-        </div>
+            <i class="fa-solid fa-close iconStyle" data-bs-toggle="tooltip" data-bs-placement="bottom"
+              data-bs-title="Fechar" data-bs-offset="10,30" delay="1000" style="color: red;"></i>
         </div>
       </div>
+    </aside>
+    <div class="pageHome" id="pageHome" style="display: none;">
+      <div class="containerDay">
+        <h2 class="vindas">Boas vindas.</h2>
+        <span class="day" id="spanDay"></span>
+      </div>
+      <div class="oficialInfos">
+        <div class="imgOfficial">
+          <img class="imgOSrc"
+            src="https://cdn.discordapp.com/attachments/1124079948072747040/1124084556400701540/wp3005582.jpg">
+        </div>
+        <div class="infosFivem">
+          <div class="passport">
+            <span id="passportOfficial">Passaporte:</span>
+          </div>
+          <div class="officiePolice">
+            <span id="spanOfficiePolice">Asp. Tenente Militar</span>
+          </div>
+          <div class="nameOfficial">
+            <span class="spanNameOfficial" id="spanNameOfficial">Brian</span>
+            <span class="spanLastNameOfficial" id="spanLastNameOfficial">DyGeras</span>
+          </div>
+        </div>
+        <button class="btnStyle" id="buttonEnterService" onClick="clickToEnterService()">
+          <span id="buttonContent">Entrar em serviço</span>
+        </button>
+      </div>
+      <div class="geralInfos">
+        <div class="inServiceOficiais retangleha">
+          <div class="topSquare">
+            <span class="nameDiv spanHa">Oficiais cadastrados:</span>
+            <div class="fa-solid fa-building-shield iconStyle2" style="margin-bottom: 2.5vw;"></div>
+          </div>
+          <span class="numberGeralInfos numberHa" id="policeRegistred">20</span>
+          <button id="viewMorePolices" class="miniButtonSquares" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-title="Ver mais" data-bs-offset="10,20" delay="1000">
+            <span class="fa-solid fa-search-plus"></span>
+          </button>
+        </div>
+        <div class="totalCidadoesInCity retangleha">
+          <div class="topSquare">
+            <span class="nameDiv spanHa">Cidadões cadastrados:</span>
+            <div class="fa-solid fa-user iconStyle2" style="margin-bottom: 2.5vw;"></div>
+          </div>
+          <span class="numberGeralInfos numberHa" id="populationTotal">2000</span>
+          <button id="viewMorePopulation" class="miniButtonSquares" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-title="Ver mais" data-bs-offset="10,20" delay="1000">
+            <span class="fa-solid fa-search-plus"></span>
+          </button>
+        </div>
+        <div class="boletinsTotais retangleha">
+          <div class="topSquare">
+            <span class="nameDiv spanHa">Boletins cadastrados:</span>
+            <div class="fa-solid fa-clipboard-list iconStyle2" style="margin-bottom: 2.5vw;"></div>
+          </div>
+          <span class="numberGeralInfos numberHa" id="b_oTotal">200</span>
+          <button id="viewMoreB_o" class="miniButtonSquares" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            data-bs-title="Ver mais" data-bs-offset="10,20" delay="1000">
+            <span class="fa-solid fa-search-plus"></span>
+          </button>
+        </div>
+      </div>
+      <div class="muralWarnings" id="muralWarnings">
+        <div id="notWarnings">
+          <span class="iconWarning">
+            <i class="fa-solid fa-circle-exclamation"></i>
+          </span>
+          <h2 class="span1W">
+            Nenhum aviso no momento
+          </h2>
+          <h6 class="span2W">
+            Te avisaremos quando houver um novo aviso!
+          </h6>
+        </div>
+        <button id="buttonNewWarning" class="miniButtonWarning" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <span>Criar aviso</span>
+        </button>
+      </div>
+      <div class="modal fade text-light" id="staticBackdrop" 
+      data-bs-backdrop="static" tabindex="-1"
+      data-bs-theme="dark"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="staticBackdropLabel">Criar aviso</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="inputWarning" class="labelTxtAreaW">Digite o que você deseja avisar:</label>
+              <textarea name="warningValue" placeholder="Ex.: Reunião as 19h na DP de paleto" class="inputWarning" id="inputWarning" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary border border-0 rounded-4 fs-5 hoverBPBtn" data-bs-dismiss="modal" id="cancelW">Cancelar</button>
+              <button type="button" class="btn btn-primary border border-0 rounded-4 fs-5 hoverBPBtn" id="confirmW">Criar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="graphArrests">
+        <canvas id="myChart"></canvas>
+      </div>
     </div>
-    <div class="pageHome">
-      
-    </div>
+  </div>
   </div>
 
 
@@ -124,6 +177,13 @@
   <script>
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+
+    myModal.addEventListener('shown.bs.modal', () => {
+      myInput.focus()
+    })
   </script>
 </body>
 

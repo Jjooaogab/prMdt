@@ -164,7 +164,7 @@ img {
 }
 
 .iconStyle {
-  font-size: 190%;
+  font-size: 25px;
   margin-top: 30%;
   margin-left: 5%;
   color: var(--color-lightCyan);
@@ -205,89 +205,99 @@ img {
   border-radius: 15px;
 }
 
+.containerDay {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4.5vw;
+  margin-top: 8vh;
+  font-family: "Poppins", sans-serif;
+  color: var(--color-lightGray);
+}
+
 .vindas {
   position: relative;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: bold;
-  margin-left: 12.5%;
-  margin-top: -48%;
-  color: var(--color-lightGray);
+  margin-bottom: -3px;
 }
 
 .day {
   position: relative;
-  font-size: 16px;
-  font-weight: 500;
-  margin-left: 12.5%;
-  margin-top: -46%;
-  color: var(--color-lightGray);
+  font-size: 1.1em;
+  font-weight: normal;
 }
 
 .oficialInfos {
-  position: absolute;
+  position: relative;
   background-color: #031634;
-  width: 36%;
-  height: 21%;
+  width: 27vw;
+  height: 18vh;
   border-radius: 0.9375em;
-  margin-top: -44%;
-  margin-left: 12.5%;
-  
-}
-
-.imgOfficial {
-  margin-left: 4%;
-  margin-top: 2.5%;
+  margin-left: 4.5vw;
+  margin-top: 20px;
 }
 
 .imgOSrc {
-  width: 120px; 
-  height: 140px;
+  position: relative;
+  width: 6vw;
+  height: 14vh;
   border-radius: var(--10pixel-in-em);
-  border: 3px solid var(--color-lightCyan);
+  border: 1px solid var(--color-lightCyan);
+  margin-top: 2vh;
+  margin-left: 1.5vw;
 }
 
 .infosFivem {
   position: relative;
-  margin-left: 32%;
-  margin-top: -23%;
+  margin-left: 18vh;
+  margin-top: -6.35vw;
 }
 
 .passport {
   color: var(--color-lightGray);
-  font-weight: 500;
-  font-size: 14px;
-  margin-bottom: 5px;
+  font-weight: 200;
+  font-size: 18px;
+  margin-bottom: .2vw;
 }
 
 .officiePolice {
+  font-weight: 600;
   color: var(--color-lightGray);
   background-color: var(--color-cyan);
-  width: 100px;
+  width: 175px;
   height: 8px;
-  padding: 4px var(--10pixel-in-em);
+  padding: 12px 1px;
   border-radius: 0.9375em;
-  margin-left: -1%;
+  margin-left: -0.1vw;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+} 
+
+#spanOfficiePolice {
+  margin-left: .3vw;
+  margin-top: -.1vh;
 }
 
 .nameOfficial {
-  font-size: 26px;
-  font-weight: 800;
+  position: relative;
+  font-size: 36px;
+  font-weight: 900;
   color: var(--color-lightCyan);
-  /* width: 100px; */
   display: flex;
   flex-direction: column;
+  margin-top: -.7vw;
 }
 
-.spanNameOfficial .spanLastNameOfficial{
-  position: absolute;
-  margin-left: -19%;
-  margin-top: .5%;
+#spanNameOfficial{
+  margin-bottom: -1vw;
 }
 
-.buttonPink {
+/* Mexer responsivo */
+.btnStyle { 
+  position: relative;
   outline: none;
   border: none;
   position: absolute;
@@ -295,38 +305,37 @@ img {
   padding: 5px 38px;
   color: white;
   background-color: var(--color-lightCyan);
-  margin-left: 50%;
-  margin-top: 6%;
+  margin-left: 33vh;
+  margin-top: -.5vw;
   transition: all .3s;
 }
 
-.buttonPink span {
+.btnStyle span {
   font-weight: 600;
   font-size: 0.9375em;
   font-family: "Poppins", sans-serif;
 }
 
-.buttonPink:hover {
+.btnStyle:hover {
   transform: scale(1.02);
 }
 
 
 .geralInfos {
-  position: absolute;
-  height: 146px;
-  top: 16%;
-  left: 54.5%;
-  display: grid;
-  grid-gap: 0px 1px;
-  grid-template-columns: repeat(3, 100%);
+  position: relative;
+  height: 23vh;
+  width: 33vw;
+  gap: 31px;
+  top: -22vh;
+  left: 34vw;
+  display: flex;
 }
 
 .retangleha {
   position: relative;
   background-color: #031634;
-  width: 91%;
-  height: 96%;
-  margin-top: 0.5em;
+  width: 33vw;
+  height: 22vh;
   border-radius: 0.9375em;
   display: flex;
   flex-direction: column;
@@ -337,29 +346,41 @@ img {
 .spanHa { 
   position: relative;
   color: white;
-  font-size: 0.9375em;
+  font-size: 1em;
   font-weight: 500;
+  margin-bottom: 2vw;
+}
+
+.topSquare {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4vw;
 }
 
 .numberHa {
-  position: relative;
+  position: absolute;
   color: var(--color-lightCyan);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.25em;
-  margin-bottom: var(--10pixel-in-em);
+  margin-top: 1vw;
+  font-size: 30px;
+  text-align: center;
 } 
 
 .miniButtonSquares {
   position: absolute;
-  margin-top: 95%;
-  margin-left: 35%;
+  margin-top: 17.5vh;
+  margin-left: 6.75vw;
   outline: none;
   border: none;
-  border-radius: 0.9375em;
+  border-radius: 0.5em;
   padding: 3px 12.5px;
   color: white;
   background-color: var(--color-lightCyan);
-  transition: ease-in-out all .3s;
+  transition: ease all .2s;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
@@ -370,10 +391,10 @@ img {
 
 .muralWarnings {
   position: relative;
-  width: 39.3%;
+  width: 33.2vw;
   height: 50%;
-  top: 46%;
-  left: 55.3%;
+  top: -19vh;
+  left: 34vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,8 +412,8 @@ img {
 
 .miniButtonWarning {
   position: absolute;
-  margin-top: -3.5%;
-  margin-left: 82%;
+  margin-top: 17.3vw;
+  margin-left: 50vh;
   outline: none;
   border: none;
   border-radius: 0.9375em;
@@ -409,105 +430,26 @@ img {
 }
 
 .iconWarning {
-  font-size: 325%;
+  font-size: 400%;
   color: white;
 }
 
 .span1W {
   margin-top: var(--10pixel-in-em);
   color: white;
-  font-size: 16px;
+
   font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 
 .span2W {
-  margin-top: var(--10pixel-in-em);
+  margin-top: .5vh;
   color: white;
-  font-size: var(--10pixel-in-em);
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
 
-.darkLayer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.514); /* Cor de fundo escuro com opacidade 0.5 */
-  z-index: 1;
-  display: none;
-}
 
-.modalContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
-
-.modalContainer.show {
-  display: flex;
-}
-
-.modal {
-  z-index: 2;
-  position: absolute;
-  background-color: var(--color-darkBlue);
-  margin-top: -50%;
-  border-radius: var(--10pixel-in-em);
-  box-shadow: 0.01rem 0rem 0.17rem 0.02rem rgb(0, 0, 0);
-  width: 40%;
-  height: 60%;
-}
-
-.close {
-  margin-top: 1em;
-  margin-left: 94%;
-  font-size: 1em;
-  transition: ease-in-out all .3s;
-}
-
-.close:hover {
-  transform: scale(1.1);
-}
-
-.contentW {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.inputWarning {
-  width: 80%;
-  height: 50%;
-  border: none;
-  resize: none;
-  border-radius: 0.9375em;
-  background-color: var(--color-cyan);
-  padding: var(--10pixel-in-em);
-  color: white;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
-  margin-bottom: 20%;
-  overflow: visible;
-}
-
-.contentW label {
-  margin-left: -48%;
-  margin-bottom: 1%;
-}
-
-.contentW h3 {
-  color: white;
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-}
 
 .buttonContainer {
   position: absolute;
@@ -527,6 +469,28 @@ img {
   border-radius: var(--10pixel-in-em);
   padding: 5px 0.7500em;
   transition: ease-in-out all .3s;
+}
+
+.inputWarning {
+  resize: none;
+  border: none;
+  outline: none;
+  width: 99%;
+  color: white;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.hoverBPBtn:hover {
+  transform: scaleX(1.03);
+}
+
+.labelTxtAreaW {
+  color: var(--color-lightGray);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
 }
 
 #cancelW {

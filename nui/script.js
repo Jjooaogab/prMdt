@@ -6,6 +6,7 @@ $(function () {
   function display(bool) {
     if (bool) {
       $("#container").show();
+      $("#pageHome").show()
     } else {
       $("#container").hide();
     }
