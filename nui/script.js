@@ -1,7 +1,8 @@
 $(function () {
 
-  var name;
-  var org;
+  let name;
+  let firstname;
+  let org;
 
   function display(bool) {
     if (bool) {
@@ -21,7 +22,7 @@ $(function () {
   }
 
   window.addEventListener("message", function (e) {
-    var item = e.data;
+    let item = e.data;
 
     if (item.type === "ui") {
       if (item.status === true) {
@@ -32,7 +33,7 @@ $(function () {
     }
 
     if (item.id != undefined) {
-      var passporte = item.id
+      let passporte = item.id
       document.getElementById("passportOfficial").innerHTML = "Passporte: " + passporte
     }
 
@@ -42,8 +43,8 @@ $(function () {
     }
 
     if (item.firstname != undefined) {
-      var firstname = item.firstname
-      document.getElementById("spanLastNameOfficial").innerHTML = firstname
+      sobrenome = item.firstname
+      document.getElementById("spanLastNameOfficial").innerHTML = sobrenome
     }
 
     if (item.org != undefined) {
@@ -52,33 +53,50 @@ $(function () {
     }
 
     if (item.count != undefined) {
-      var countP = item.count
+      let countP = item.count
       document.getElementById("populationTotal").innerHTML = countP
     }
 
     if (item.countO != undefined) {
-      var countO = item.countO
+      let countO = item.countO
       document.getElementById("policeRegistred").innerHTML = countO
     }
   })
 
   const divNW = $("#notWarnings");
   const divAll = $("#muralWarnings");
+  const divWarning = $("#warningsDiv")
 
-  $("#confirmW").click(function (name, org) {
+  $("#confirmW").click(function (name, sobrenome, org) {
 
-    var value = $("#inputWarning").val();
+    let value = $("#inputWarning").val();
+    let img = "https://cdn.discordapp.com/attachments/966571671140069406/983207620934512650/unknown.png"
 
     divNW.remove();
 
-    var divItem = $("<div>").addClass("warningsDiv")
+    let divItem = $("<div>").addClass("warningsDiv") // Create div with class warningsDiv
 
-    var pValue = $("<p>").text(value).addClass("valueW")
-    var pNome = $("<p>").text(nome).addClass("nameW")
-    var pOrg = $("<p>").text(office).addClass("orgW")
+    let itensW = $("<div>").addClass("itemW") // Container Div
 
-    divItem.append(pValue, pNome, pOrg)
-    divAll.append(divItem)
+      let imgW = $("<div>").addClass("imgW") // Div container image office
+        let imgSrcW = $("<img>").attr("src", img).addClass("imgSrcW")
+
+      let infosW = $("<div>").addClass("infosW") // Div container info office
+        let span1 = $("<span>").text(nome + " " + sobrenome ).addClass("nameW")
+        let span2 =  $("<span>").text(office).addClass("orgW")
+
+      let contentWarning = $("<div>").addClass("contentWarning") // Div container content warning
+        let valueWarning = $("<p>").text(value).addClass("valueWarning")
+
+    imgW.append(imgSrcW)
+    infosW.append(span1, span2)
+    contentWarning.append(valueWarning)
+
+
+
+    itensW.append(imgW, infosW, contentWarning)
+    divWarning.append(itensW)
+    divAll.append(divWarning)
     $("#inputWarning").val("");
   })
 
