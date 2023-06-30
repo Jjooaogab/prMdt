@@ -56,7 +56,7 @@ $(function () {
       document.getElementById("populationTotal").innerHTML = countP
     }
 
-    if (item.countO != undefined){
+    if (item.countO != undefined) {
       var countO = item.countO
       document.getElementById("policeRegistred").innerHTML = countO
     }
@@ -65,7 +65,7 @@ $(function () {
   const divNW = $("#notWarnings");
   const divAll = $("#muralWarnings");
 
-  $("#confirmW").click(function(name, org){
+  $("#confirmW").click(function (name, org) {
 
     var value = $("#inputWarning").val();
 
@@ -115,42 +115,50 @@ function clickToEnterService() {
 }
 
 // Graph
-const ctx = document.getElementById('myChart').getContext('2d');
-const values = [12, 19, 3, 5, 2, 3, 9];
+// const ctx = document.getElementById('myChart').getContext('2d');
+// const values = [12, 19, 3, 5, 2, 3, 9];
 
-const myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
-    datasets: [{
-      label: 'Presos',
-      data: values,
-      backgroundColor: 'rgba(0, 123, 255, 0.5)',
-      borderColor: 'rgba(0, 123, 255, 1)',
-      borderWidth: 1,
-      borderCapStyle: 'round',
-      tension: 0.3
-    }]
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true // Começa o eixo y no valor zero
-      }
-    }
-  }
-})
+// const myChart = new Chart(ctx, {
+//   type: 'line',
+//   data: {
+//     labels: ['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'],
+//     datasets: [{
+//       label: 'Presos',
+//       data: values,
+//       backgroundColor: 'rgba(0, 123, 255, 0.5)',
+//       borderColor: 'rgba(0, 123, 255, 1)',
+//       borderWidth: 1,
+//       borderCapStyle: 'round',
+//       tension: 0.3
+//     }]
+//   },
+//   options: {
+//     scales: {
+//       y: {
+//         beginAtZero: true // Começa o eixo y no valor zero
+//       }
+//     }
+//   }
+// })
 
 // OpenModal 
 const buttonW = document.getElementById("buttonNewWarning");
 const closeW = document.getElementById("closeW");
 
-buttonW.addEventListener("click", function() {
-  document.getElementById("modalContainer").classList.add("show"); 
+buttonW.addEventListener("click", function () {
+  document.getElementById("modalContainer").classList.add("show");
 });
 
-closeW.addEventListener("click", function() {
-  document.getElementById("modalContainer").classList.remove("show"); 
+closeW.addEventListener("click", function () {
+  document.getElementById("modalContainer").classList.remove("show");
 })
 
-//Crud Warning
+function openModal() {
+  document.getElementById("myModal").style.display = "flex";
+}
+
+// Função para fechar o modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+

@@ -93,6 +93,7 @@ RegisterCommand("mdt", function(source)
 
         TriggerServerEvent("getAllPlayers")
         TriggerServerEvent("getAllOffices")
+        TriggerServerEvent("getSelfiePhoto")
     else
         TriggerEvent("Notify", "negado", "Negado!", "Você não é policial!")
     end

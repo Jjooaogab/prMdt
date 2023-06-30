@@ -194,6 +194,7 @@ img {
   align-items: center;
   justify-content: center;
 }
+
 /* Page home */
 
 .pageHome {
@@ -203,6 +204,7 @@ img {
   top: -100%;
   left: 6.5%;
   border-radius: 15px;
+  display: none;
 }
 
 .containerDay {
@@ -274,7 +276,7 @@ img {
   margin-bottom: 5px;
   display: flex;
   align-items: center;
-} 
+}
 
 #spanOfficiePolice {
   margin-left: .3vw;
@@ -291,12 +293,12 @@ img {
   margin-top: -.7vw;
 }
 
-#spanNameOfficial{
+#spanNameOfficial {
   margin-bottom: -1vw;
 }
 
 /* Mexer responsivo */
-.btnStyle { 
+.btnStyle {
   position: relative;
   outline: none;
   border: none;
@@ -343,7 +345,7 @@ img {
   align-items: center;
 }
 
-.spanHa { 
+.spanHa {
   position: relative;
   color: white;
   font-size: 1em;
@@ -368,7 +370,7 @@ img {
   margin-top: 1vw;
   font-size: 30px;
   text-align: center;
-} 
+}
 
 .miniButtonSquares {
   position: absolute;
@@ -399,7 +401,7 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: var(--color-darkBlue) ;
+  background-color: var(--color-darkBlue);
   border-radius: 0.9375em;
 }
 
@@ -515,7 +517,7 @@ img {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: var(--10pixel-in-em); 
+  margin-bottom: var(--10pixel-in-em);
 }
 
 .valueW {
@@ -538,4 +540,123 @@ img {
 .nameW {
   margin-left: 4px;
   color: white;
+}
+
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: var(--color-darkBlue);
+  margin: 15% auto;
+  padding: 20px;
+  width: 30vw;
+  height: 50vh;
+  border-radius: 15px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0;
+}
+
+.modal-close {
+  cursor: pointer;
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  transition: ease-in-out all .3s;
+}
+
+.modal-close:hover {
+  transform: scale(1.1);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  margin-left: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  width: 8vw;
+  transition: ease-in-out all .3s;
+}
+
+/* Estilos para os botões */
+.modal-buttons button {
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-buttons button.cancel {
+  background-color: rgb(211, 0, 0);
+}
+
+.modal-buttons button.create {
+  background-color: var(--color-lightCyan);
+}
+
+.modal-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para o textarea */
+textarea {
+  resize: none;
+  width: 29vw;
+  height: 30vh;
+  padding: 10px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  color: white;
+  background-color: var(--color-lightCyan);
+}
+
+textarea::placeholder {
+  color: rgb(201, 201, 201);
+}
+
+.labelTxtAW {
+  position: relative;
+  font-size: 18px;
+  color: white;
+}
+
+.imgWarning {
+  border-radius: 50%;
+  width: 3vw;
 }

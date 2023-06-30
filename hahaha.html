@@ -1,46 +1,122 @@
-<div class="pagina" id="home">
-  <div class="muralWarnings" id="muralWarnings">
-    <div id="notWarnings">
-      <span class="iconWarning">
-        <ss class="fa-solid fa-circle-exclamation"></ss>
-      </span>
-      <span class="span1W">
-        Nenhum aviso no momento
-      </span>
-      <span class="span2W">
-        Te avisaremos quando houver um novo aviso!
-      </span>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal Bonito</title>
+  <style>
+    /* Estilos para o modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+    }
+
+    .modal-close {
+      cursor: pointer;
+      color: #888;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .modal-close:hover,
+    .modal-close:focus {
+      color: #000;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+    }
+
+    .modal-buttons button {
+      margin-left: 10px;
+    }
+
+    /* Estilos para os botões */
+    .modal-buttons button {
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .modal-buttons button.cancel {
+      background-color: red;
+    }
+
+    .modal-buttons button.create {
+      background-color: blue;
+    }
+
+    .modal-buttons button:hover {
+      opacity: 0.8;
+    }
+
+    /* Estilos para o textarea */
+    textarea {
+      resize: none;
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Botão para abrir o modal -->
+  <button onclick="openModal()">Abrir Modal</button>
+
+  <!-- Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Criar aviso</h2>
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+      </div>
+      <textarea placeholder="Digite seu aviso aqui..."></textarea>
+      <div class="modal-buttons">
+        <button class="cancel" onclick="closeModal()">Cancelar</button>
+        <button class="create">Criar</button>
+      </div>
     </div>
   </div>
-  <button 
-  id="buttonNewWarning" 
-  class="miniButtonWarning"
-  >
-    <span>Criar aviso</span>
-  </button>
-  <div class="modalContainer" id="modalContainer">
-    <div class="modal">
-      <div class="close" id="closeW">
-        <span class="fa-solid fa-close"></span>
-      </div>
-      <div class="contentW">
-        <h3>Criar aviso!</h3>
-        <label for="inputWarning">Digite o que deseja avisar:</label>
-        <textarea 
-        id="inputWarning" 
-        class="inputWarning"
-        placeholder="Ex.: Reunião as 19h"
-        ></textarea>
-        <div class="buttonContainer">
-          <button class="cancelW buttonW" id="cancelW">
-            <span>Cancelar</span>
-          </button>
-          <button class="confirmW buttonW" id="confirmW">
-            <span>Confirmar</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="topSearchs"></div>
-</div>
+
+  <script>
+    // Função para abrir o modal
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    // Função para fechar o modal
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
